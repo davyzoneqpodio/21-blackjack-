@@ -121,5 +121,5 @@ alter table online_room_players enable row level security;
 alter table room_messages enable row level security;
 alter table online_settlements enable row level security;
 
-revoke all on function settle_online_profile(uuid,uuid,integer,integer,integer) from public, anon, authenticated;
-grant execute on function settle_online_profile(uuid,uuid,integer,integer,integer) to service_role;
+revoke all on function settle_online_session(uuid,uuid,integer,integer,integer,integer) from public, anon, authenticated;
+grant execute on function settle_online_session(uuid,uuid,integer,integer,integer,integer) to service_role;
